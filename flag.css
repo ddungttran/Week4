@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: center; 
+    margin: 30px; 
+}
+/* Make the background blue */
+body {
+    background-color: rgb(66, 100, 172); 
+}
+a {
+    text-decoration: none; 
+    margin-left: 30px; 
+    color: white; 
+}
+a:hover {
+    text-decoration: underline white 2px; /* Add underline on hover */
+}
+/* Flag layout */
+.flag {
+    display: grid; 
+    grid-template-columns: 1fr 2fr; /* Two columns 1 for stars, 2 for stripes */
+    grid-template-rows: repeat(13, 1fr); /* 13 rows for the stripes */
+    width: 80%; 
+    aspect-ratio: 1.9; 
+    position: relative; 
+}
+.star {
+    display: flex; 
+    z-index: 1; 
+}
+
+/* Stars image */
+.stars-img {
+    width: 100%; 
+    height: 100%; 
+}
+
+/* Stripes layout */
+.stripes {
+    position: absolute; 
+    width: 100%;
+    height: 100%; 
+}
+
+/* Each stripe */
+.stripe {
+    height: calc(100% / 13); /* 13 equal rows for stripes */
+}
+
+/* Red stripes */
+.red {
+    background-color: #BF0A30; 
+}
+
+/* White stripes */
+.white {
+    background-color: #ffffff;
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .flag {
+        width: 100%; 
+        grid-template-columns: 1fr 3fr; 
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .flag {
+        grid-template-columns: 1fr 4fr; 
+    }
+}

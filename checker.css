@@ -1,0 +1,73 @@
+/* Global reset for margins, padding, and font styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, "Geneva", Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Set background color for body */
+body{
+    background-color: rgb(66, 100, 172);
+}
+
+/* Styling header */
+header {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+/* Centering main*/
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling all anchor */
+a{
+    text-decoration: none;
+    margin-left: 30px;
+    color: white;
+}
+
+/* Hover effect */
+a:hover {
+    text-decoration: underline white 2px ;
+}
+
+/* Styling container that holds the grid (big-box) */
+.big-box {
+    width: 50%;
+    margin-top: 100px;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+/* Creating grid layout for rows */
+.row1, .row2, .row3, .row4, .row5, .row6, .row7, .row8 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+/* Styling for the grid boxes */
+.box {
+    background-color: black;
+    aspect-ratio: 1;
+}
+
+/* Even box color white */
+.row1 .box:nth-child(even),
+.row3 .box:nth-child(even),
+.row5 .box:nth-child(even),
+.row7 .box:nth-child(even) {
+    background-color: white;
+}
+
+/* Odd box color white */
+.row2 .box:nth-child(odd),
+.row4 .box:nth-child(odd),
+.row6 .box:nth-child(odd),
+.row8 .box:nth-child(odd) {
+    background-color: white;
+}
